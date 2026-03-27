@@ -346,7 +346,7 @@ class SpecialPandocExport extends \SpecialPage {
 			->from( 'categorylinks' );
 
 		if ( version_compare( $mwVersion, '1.44', '>=' ) ) {
-			$qb->join( 'category', null )
+			$qb->join( 'linktarget', null, 'cl_target_id = lt_title' )
 				->where( [ 'cat_title' => $dbKey ] );
 		} else {
 			$qb->where( [ 'cl_to' => $dbKey ] );
