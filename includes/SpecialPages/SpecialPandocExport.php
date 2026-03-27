@@ -76,6 +76,12 @@ class SpecialPandocExport extends \SpecialPage {
 			'ext'           => 'txt',
 			'mime'          => 'text/plain',
 		],
+		'txt' => [
+			'label'         => 'Markdown (.md)',
+			'pandoc_format' => 'markdown',
+			'ext'           => 'md',
+			'mime'          => 'text/plain',
+		],
 	];
 
 	private Config $config;
